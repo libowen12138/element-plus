@@ -5,6 +5,7 @@
     :model="dynamicValidateForm"
     label-width="auto"
     class="demo-dynamic"
+    
   >
     <el-form-item
       prop="email"
@@ -35,6 +36,7 @@
         trigger: 'blur',
       }"
     >
+      {{'domains.' + index + '.value'}}
       <el-input v-model="domain.value" />
       <el-button class="mt-2" @click.prevent="removeDomain(domain)">
         Delete
